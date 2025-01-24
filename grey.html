@@ -18,12 +18,27 @@
     .center-content {
       text-align: center;
     }
+    .btn-dark-gray {
+      background-color: #343a40; /* Custom dark gray color */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 15px; /* Spacing from the text above */
+    }
+    .btn-dark-gray:hover {
+      background-color: #495057; /* Slightly lighter shade for hover effect */
+    }
   </style>
 </head>
 <body>
   <div class="center-content">
     <h3>Audio!</h3>
     <p>Tap Anywhere to Start.</p>
+    <!-- Return Button -->
+    <a href="index.html" class="btn-dark-gray">Dugmai garanawa 🌹</a>
+    
     <audio id="background-music" loop>
       <source src="ns.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
