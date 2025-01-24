@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Day</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa; /* Light Gray Background */
+      font-family: 'Arial', sans-serif;
+    }
+    .card {
+      border: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card-body {
+      text-align: center;
+    }
+    .gifts-section {
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Title -->
+    <h2 class="text-dark text-center mt-4">🌹21💎</h2>
+    <!-- Subtitle (Poem) -->
+    <p class="text-muted text-center">🎂 🥳 🎉 🎈 🎁 🎊</p>
+
+    <!-- Gift Boxes -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 gifts-section">
+      <!-- Generate 8 gift boxes -->
+      <script>
+        const giftLinks = [
+          "green.html", "blue.html", "white.html", "red.html", "grey.html", "brown.html", "purple.html", "black.html"
+        ];
+
+        const giftTitles = [
+          "Eyes", "Fav Color", "React", "Hoodie", "Hoodie", "Nails", "Jacket", "Uniform"
+        ];
+
+        const colors = [
+          "#28a745", /* Green */
+          "#007bff", /* Blue */
+          "#ffffff", /* White */
+          "#dc3545", /* Red */
+          "#6c757d", /* Grey */
+          "#795548", /* Brown */
+          "#6f42c1", /* Purple */
+          "#000000"  /* Black */
+        ];
+
+        const textColors = [
+          "#ffffff", /* White text for Green */
+          "#ffffff", /* White text for Blue */
+          "#000000", /* Black text for White */
+          "#ffffff", /* White text for Red */
+          "#ffffff", /* White text for Grey */
+          "#ffffff", /* White text for Brown */
+          "#ffffff", /* White text for Purple */
+          "#ffffff"  /* White text for Black */
+        ];
+
+        document.write(
+          giftLinks.map((link, index) => `
+            <div class="col">
+              <a href="${link}" style="text-decoration: none;">
+                <div class="card" style="background-color: ${colors[index]};">
+                  <div class="card-body" style="color: ${textColors[index]};">
+                    <i class="fa-solid fa-gift fa-2x"></i>
+                    <h5 class="card-title">${giftTitles[index]}</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          `).join("")
+        );
+      </script>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
